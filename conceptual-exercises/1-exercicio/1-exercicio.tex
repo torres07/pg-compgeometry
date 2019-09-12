@@ -1,0 +1,70 @@
+\documentclass{exam}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+
+\title{
+	\normalsize INF2604 - Geometria Computacional\\
+	\LARGE \textbf{Exercício 1: Conceitos Básicos}
+	}
+	
+\author{Pedro Torres}
+
+\date{Agosto de 2019}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+
+\question
+
+\begin{Verbatim}[tabsize=4]
+	pseudo-angulo(x, y):
+		se y >= 0:
+			se x >= 0:
+				se x >= y:
+					retorne y/x
+				se não:
+					retorne 2 - x/y
+			se -x <= y:
+				retorne 2 + (-x)/y
+			se não:
+				retorne 4 - y/(-x)
+		se x < 0:
+			se -x >= -y:
+				retorne 4 + (-y)/(-x)	
+			se não:
+				retorne 6 - (-x)/(-y)
+		se x <= -y
+			retorne 6 + x/(-y)
+		se não:
+			retorne 8 - (-y)/x
+
+\end{Verbatim}
+
+\question Seja $\overrightarrow{v_1} = (x_1, y_1), \overrightarrow{v_2} = (x_2, y_2), \overrightarrow{v_3} = (x_3, y_3)$. Queremos determinar o ponto de singularidade, ou seja, $\overrightarrow{v} = 0$. Para isto, resolvemos o seguinte sistema:
+
+\begin{equation}
+	\begin{cases}
+		\lambda_1 x_1 + \lambda_2 x_2 + \lambda_3 x_3 = 0 \\
+		\lambda_1 y_1 + \lambda_2 y_2 + \lambda_3 y_3 = 0 \\
+		\lambda_1 + \lambda_2 + \lambda_3 = 1	
+	\end{cases}
+\end{equation}
+
+\question
+\begin{parts}
+
+\part 2-manifold, possui fronteira.
+\part 1-manifold, não possui fronteira.
+\part 3-manifold, possui fronteira.
+\part 2-manifold, não possui fronteira.
+\end{parts}
+
+\end{questions}
+
+\end{document}
